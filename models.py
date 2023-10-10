@@ -37,7 +37,7 @@ def get_vlm_output(img):
 
 def get_llm_output(img_description):
     prompt = get_llm_prompt()
-
+    prompt = prompt + img_description
     completion = openai.Completion.create(
       engine="text-davinci-003",
       prompt=prompt,
