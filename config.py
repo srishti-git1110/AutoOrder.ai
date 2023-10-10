@@ -1,5 +1,6 @@
 import dotenv
-from pydantic import BaseSettings, Field
+from pydantic import Field
+from pydantic_settings import BaseSettings
 
 dotenv.load_dotenv()
 class APIConfig(BaseSettings):

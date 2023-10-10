@@ -3,6 +3,7 @@ from models import get_llm_output, get_vlm_output
 
 import torch
 from PIL import Image
+from io import BytesIO
 from fastapi import FastAPI, UploadFile
 from fastapi.responses import JSONResponse
 
@@ -13,7 +14,10 @@ async def process_image(img: UploadFile):
     if not img.filename:
         return JSONResponse(content={"error": "No image file provided."}, status_code=400)
 
-    img = Image.open(img).convert('RGB')
+    image_bytes = await img.read()
+    image_stream = BytesIO(image_bytes)
+    img = Image.open(image_stream).convert('RGB')
+
     img_description = get_vlm_output(img)
     instruction = get_llm_output(img_description)
     output = get_multion_output(instruction)
