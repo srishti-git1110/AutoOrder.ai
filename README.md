@@ -6,12 +6,12 @@ It combines cutting-edge Vision and Language Models (VLM and LLM) to transform i
 As of now, the repository implements a FastAPI endpoint that takes an input image (a chat screenshot, a food/clothing item etc.) and automates browser actions accordingly using the MultiON API.
 
 ## Table of Contents
-*Installation
-*Usage
-*Testing
-*API Endpoints
-*Contributing
-*License
+* [Installation](https://github.com/srishti-git1110/AutoOrder_ai#installation)
+* [Usage](https://github.com/srishti-git1110/AutoOrder_ai#usage)
+* [Testing](https://github.com/srishti-git1110/AutoOrder_ai#testing)
+* [API Endpoints](https://github.com/srishti-git1110/AutoOrder_ai#api-endpoints)
+* [Contributing](https://github.com/srishti-git1110/AutoOrder_ai#contributing)
+* [License](https://github.com/srishti-git1110/AutoOrder_ai#license)
 
 ## Installation
 To run the MultiON API on your local machine, follow these steps:
