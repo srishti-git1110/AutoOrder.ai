@@ -17,11 +17,7 @@ async def process_image(img: UploadFile):
     image_bytes = await img.read()
     image_stream = BytesIO(image_bytes)
     img = Image.open(image_stream).convert('RGB')
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 7dad3e8f71f4e3f8bac97ff199f7d3e2dbe59852
     img_description = get_vlm_output(img)
     instruction = get_llm_output(img_description)
     output = get_multion_output(instruction)
