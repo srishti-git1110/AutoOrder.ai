@@ -13,7 +13,10 @@ async def process_image(img: UploadFile):
     if not img.filename:
         return JSONResponse(content={"error": "No image file provided."}, status_code=400)
 
-    img = Image.open(img).convert('RGB')
+    image_bytes = await img.read()
+    image_stream = BytesIO(image_bytes)
+    img = Image.open(image_stream).convert('RGB')
+    
     img_description = get_vlm_output(img)
     instruction = get_llm_output(img_description)
     output = get_multion_output(instruction)
