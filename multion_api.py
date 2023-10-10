@@ -13,7 +13,6 @@ def get_multion_output(instruction):
     )
 
     toolkit = MultionToolkit()
-    tools=toolkit.get_tools()
 
     agent = initialize_agent(
         tools=toolkit.get_tools(),
@@ -21,6 +20,6 @@ def get_multion_output(instruction):
         agent=AgentType.STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION,
         verbose=True
     )
-    output = agent.run()
+    output = agent.run(instruction)
 
     return output
