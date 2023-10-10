@@ -34,6 +34,8 @@ pip install -r requirements.txt
 pip install uvicorn
 ```
 
+4. You'll also need an OpenAI API key for this in a .env file in the project's root directory. Make sure to create this file and enter your key as an environment variable.
+
 ## Usage
 1. Start the FastAPI application using Uvicorn:
 ```
