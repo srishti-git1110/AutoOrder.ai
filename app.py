@@ -8,9 +8,9 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
-@app.post("/process-image")
+@app.post("/process-image/")
 async def process_image(img: UploadFile):
-    if img is None:
+    if not img.filename:
         return JSONResponse(content={"error": "No image file provided."}, status_code=400)
 
     img = Image.open(img).convert('RGB')
