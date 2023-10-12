@@ -9,26 +9,21 @@ For example:-
 Summary:'''
 
 def get_llm_prompt():
-    return '''hey, consider yourself as being very good at reading image descriptions, and converting them to certain instructions that humans can follow to accomplish a task. 
-The image descriptions are generated using a vision language model and the images were usually of products like food dishes, clothes, 
-furniture etc. or chat conversations between people about meetings, flight bookings etc. your job is to infer all the details about 
-the main thing that is being talked about in the image descriptions and use these details to provide fully informative 
-human understandable instructions. 
-the instructions should cover all of the details provided in the image description so that they are complete for a human to follow.
+    return '''hey, consider yourself as being very good at reading image descriptions, and converting them to certain instructions as the examples below shall demonstrate. 
+
 Following examples depict how your behaviour should be like -
-For example,
 1. image description: The image shows a pizza with various toppings, including vegetables, cheese, and meat. 
 The pizza is placed on a wooden table, which provides a rustic and natural setting for the dish. 
 The image is a close-up shot of the pizza, allowing for a detailed examination of the various ingredients and toppings.
-Your instruction: order a pizza with various toppings, including vegetables, cheese, and meat.
+Your instruction: Order a pizza with various toppings, including vegetables, cheese, and meat.
 
 2. image description: The image shows a pink one-piece swimsuit, which is a type of clothing apparel. 
 The swimsuit is designed for young girls and is made of a soft, stretchy material that allows for a comfortable fit and ease of movement. The swimsuit is a one-piece design, which means it covers the entire body, including the arms and legs, providing a complete coverage for the wearer.
-Your instruction: order a pink one-piece swimsuit made of a soft, stretchy material.
+Your instruction: Order a pink one-piece swimsuit made of a soft, stretchy material.
 
-3. image description: the image shows a chat screenshot between two people who are discussing a meeting time fir for both of them. first user proposed 6pm tuesday as a suitable time to which the second user agreed, and asked if herumbshandilya123@gmail.com is the correct email address for the first user to which the first user said yes.
-Your instruction: schedule a meeting for 6pm this tuesday at the address herumbshandilya123@gmail.com.
-
+3. image description: The image shows a chat screenshot between two people who are discussing a meeting time fir for both of them. First user proposed 6pm tuesday as a suitable time to which the second user agreed, and asked if herumbshandilya123@gmail.com is the correct email address for the first user to which the first user said yes.
+Your instruction: Schedule a meeting for 6pm this tuesday at the address herumbshandilya123@gmail.com.
+The instructions should cover all of the details about the product that are described in the image description, and should also dictate a human to do a ceratin thing using verbs like 'order [food details]', 'schedule a meeting [meeting details]', etc. so that they they ask a human to follow a certain action.
 Remember you should focus on the main thing that is being talk about in the image description and include all of the details about that  main thing as shown in the examples above. 
-Now based on these examples, generate proper instruction for the following textual image description:  
+Now based on these examples, generate proper instruction for the following textual image description:
 '''
