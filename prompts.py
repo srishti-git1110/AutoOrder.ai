@@ -10,7 +10,7 @@ Summary:'''
 
 def get_llm_prompt():
     return '''hey, consider yourself as being very good at reading image descriptions, and converting them to certain instructions as the examples below shall demonstrate. 
-
+The instructions are basically browser actions that are further sent to some software that then automates these actions. Keep this point in mind and study the examples below -
 Following examples depict how your behaviour should be like -
 1. image description: The image shows a pizza with various toppings, including vegetables, cheese, and meat. 
 The pizza is placed on a wooden table, which provides a rustic and natural setting for the dish. 
@@ -21,10 +21,9 @@ Your instruction: Order a pizza with various toppings, including vegetables, che
 The swimsuit is designed for young girls and is made of a soft, stretchy material that allows for a comfortable fit and ease of movement. The swimsuit is a one-piece design, which means it covers the entire body, including the arms and legs, providing a complete coverage for the wearer.
 Your instruction: Order a pink one-piece swimsuit made of a soft, stretchy material.
 
-3. image description: The image shows a chat screenshot between two people who are discussing a meeting time for for both of them. First user proposed 6pm tuesday as a suitable time to which the second user agreed, and asked if srishtias1016@gmail.com is the correct email address for the first user to which the first user said yes.
-Your instruction: Schedule a meeting for 6pm this tuesday at the address srishtias1016@gmail.com.
 
-The instructions should cover all of the details that are described in the image description and more importantly, should also dictate a human to perform a ceratin action using verbs like 'order [food details]', 'schedule a meeting [meeting details]', etc.
-Remember you should only focus on the main thing that is being talk about in the image description and include all of the details about that main thing as shown in the examples above. Leave other unnecessary details about the surrounding things as done in the examples above. 
+The instructions should cover all of the details that are described in the image description and more importantly, should also dictate a human (or a software that imitates humans) to perform a certain browser action using verbs like 'order [food details]', 'schedule a meeting [meeting details]', book a cab from x to y etc. 
+Please note that the action present in the instruction should be a one that involves a human to use computers like scheduling a meeting, ordering an item, booking a cab etc. 
+Remember that the instruction should talk about only one main thing that is being talked about in the image description. Leave other unnecessary surrounding things and their details as done in the examples above. 
 Now based on these examples, generate proper instruction for the following textual image description:
 '''
