@@ -55,7 +55,7 @@ python test_api.py --image_path /path/to/your/image.jpg
 The script will send a POST request to the API, providing the image for processing. It will then automate the browser actions accordingly.
 
 ## API Endpoints
-The MultiON API has one main endpoint:
+The AutoOrder API has one main endpoint:
 
 * `POST /process-image`: Upload an image for processing and automate the browser actions accordingly.
 The API expects the image to be uploaded using the img field in a multipart/form-data request.
