@@ -49,7 +49,7 @@ This will launch the API locally at http://127.0.0.1:8000.
 You can use the provided test_api.py script to test the API with an image file. Simply run the script from the command line and provide the path to the image file as an argument:
 
 ```
-python test_api.py --image_path /path/to/your/image.jpg
+python test_api.py /path/to/your/image.jpg
 ```
 
 The script will send a POST request to the API, providing the image for processing. It will then automate the browser actions accordingly.
